@@ -7,4 +7,14 @@ class List
 private:
 
 public:
+	List()
+	{}
+	void addFirst(ObjectType ot);
+	void addLast(ObjectType ot);
+	void addSelect(ObjectType ot, int index);
+
+	int findSelect(ObjectType ot);
+	int listCount();
+	bool removeSelect(ObjectType ot, int index);
+	void emptyList();
 };
