@@ -7,8 +7,9 @@ class List
 private:
 
 public:
-	List()
-	{}
+	List();
+
+	~List();
 	void addFirst(ObjectType ot);
 	void addLast(ObjectType ot);
 	void addSelect(ObjectType ot, int index);
