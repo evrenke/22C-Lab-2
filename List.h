@@ -5,17 +5,29 @@ template <class ObjectType>
 class List
 {
 private:
-
+	Node* firstElem;
 public:
-	List();
+	List() {
+		firstElem = nullptr;
+	}
 
-	~List();
-	void addFirst(ObjectType ot);
-	void addLast(ObjectType ot);
+	~List() {
+		emptyList();
+	}
+	void addFirst(ObjectType ot) {
+		firstElem = new Node(firstElem, ot);
+	}
+	void addLast(ObjectType ot) {
+	}
 	void addSelect(ObjectType ot, int index);
 
-	int findSelect(ObjectType ot);
+	ObjectType findSelect(int i);
 	int listCount();
-	bool removeSelect(ObjectType ot, int index);
-	void emptyList();
+	void removeSelect(int index) {
+	}
+	void emptyList() {
+		while (firstElem != nullptr) {
+			removeSelect(0)
+		}
+	}
 };
