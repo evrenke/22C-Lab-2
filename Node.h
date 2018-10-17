@@ -5,22 +5,39 @@ class Node
 {
 private:
 	Node* ptr;
-	ObjectType* objectPtr;
+	ObjectType objectData;
 public:
 
-	Node(Node *nextPtr, ObjectType *ot)
+	Node(Node *nextPtr, ObjectType ot)
 	{
 		ptr = nextPtr;
-		objectPtr = ot;
+		objectData = ot;
 	}
-	Node(ObjectType *ot)
+	Node(ObjectType ot)
 	{
 		ptr = null;
-		objectPtr = ot;
+		objectData = ot;
+	}
+
+	void setNext(Node *next)
+	{
+		ptr = next;
+	}
+	Node *getNext()
+	{
+		return ptr;
+	}
+	void setData(ObjectType newData)
+	{
+		objectData = newData;
+	}
+	ObjectType getData()
+	{
+		return objectData;
 	}
 
 	~Node()
 	{
-		delete objectPtr;
+		delete ptr;
 	}
 };
